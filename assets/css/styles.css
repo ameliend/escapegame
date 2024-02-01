@@ -703,6 +703,8 @@ button.identical-button:hover {
 .footer-content {
     font-size: 16px; /* Taille de police */
     color: #827070; /* Couleur du texte */
+    display: flex;
+    justify-content: space-between;
 }
 
 
