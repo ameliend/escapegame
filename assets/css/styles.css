@@ -1,0 +1,726 @@
+body, h1, h2, p, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 0; /* Enlève le padding */
+}
+
+main {
+    margin: 0 auto; /* Marge en haut et en bas de 20px, et centrer horizontalement */
+    padding-top: 0px; /* Padding de 100px en haut */
+    padding-left: 150px; /* Padding de 150px à gauche */
+    padding-right: 150px; /* Padding de 150px à droite */
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    z-index: 2; /* Place le contenu principal au-dessus de la bannière */
+}
+
+h1.index_title  {
+    font-size: 78px;
+    margin-bottom: 10px;
+    margin-top: 278px
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 60px; /* Ajoutez une marge au-dessus du titre pour le décaler vers le bas */
+
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les liens */
+a {
+    background-color: #DC314E; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none; /* Supprimer les soulignements des liens */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+a:hover {
+    background-color: #C12E4A; /* Couleur de survol des liens */
+}
+
+
+a.nostyle {
+    background-color: black; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+    padding: 0px 0px;
+    font-size: 18px;
+    text-decoration: none; /* Supprimer les soulignements des liens */
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.normal-link{
+    background-color: transparent; /* Fond des liens */
+    color: #DC314E; /* Texte des liens en blanc */
+    padding: 0px 0px;
+    text-decoration: underline; /* Supprimer les soulignements des liens */
+    border-radius: 0px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.normal-link:hover{
+    background-color: transparent; /* Fond des liens */
+}
+/*a:hover {
+    background-color: black;  Couleur de survol des liens 
+}
+*/
+
+/* Boutons */
+
+button {
+    background-color: #DC314E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.first_btn {
+    padding: 10px 64px;
+    font-size: 22px;
+    margin: 31px;
+    margin-bottom: 83px;
+}
+
+
+button:hover {
+    background-color: #C12E4A;
+}
+
+
+
+/* Styles spécifiques pour les missions */
+.missions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.missions a {
+    width: 200px; /* Définissez la largeur souhaitée pour tous les boutons */
+    max-width: 100%; /* Assurez-vous que la largeur n'excède pas la largeur du conteneur */
+    background-color: #DC314E;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+/* Style pour le bouton Soumettre au survol */
+.missions a:hover {
+    background-color: #C12E4A;
+}
+
+/* Styles pour les modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #181818; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centre le contenu horizontalement */
+}
+
+/* Style pour l'image dans la modale */
+.modal-content img {
+    max-width: 60%; /* Ajustez la largeur de l'image pour s'adapter à la modale */
+    height: auto; /* Ajustez automatiquement la hauteur pour conserver les proportions */
+    display: block; /* Centrez l'image horizontalement */
+    margin: 13px auto; /* Centrez l'image horizontalement */
+    border-radius: 5px; /* Ajoutez des bords arrondis à l'image */
+}
+
+.close {
+    color: #fff;    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #DC314E;
+}
+
+
+
+/* Style pour les informations */
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #DC314E;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Style pour les champs de formulaire */
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+
+}
+
+.input-hidden{
+  background-color: black;  
+}
+
+.btn-hidden{
+    background-color: black;
+    color: black;
+}
+
+.btn-hidden:hover{
+    background-color: black;
+    color: black;
+}
+
+/* Styles pour la mission */
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.info input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+.random-box {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid #fff; /* Bordure blanche */
+    color: #fff; /* Texte blanc */
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+    position: relative;
+    background-color: transparent; /* Fond transparent */
+    border-radius: 5px;
+}
+
+/* Annuler la couleur de fond au survol */
+.random-box:hover {
+    background-color: transparent; /* Fond reste transparent au survol */
+}
+
+
+/* Classes additionnelles pour ajuster les styles spécifiques */
+.random-box-small {
+    padding: 100px 200px;
+    border-radius: 5px;
+}
+
+.random-box-medium {
+    padding: 130px 250px;
+    border-radius: 8px;
+}
+
+.random-box-large {
+    padding: 250px 300px;
+    border-radius: 10px;
+}
+
+
+/* Classes apour enlever le curseur */
+.nocursor{
+    cursor: none;
+}
+
+button.nocursor, a.nocursor {
+    cursor: none;
+    margin: 50px;
+    margin-left: 579px;
+}
+
+button.nocursor:hover, a.nocursor:hover {
+    cursor: none;
+    background-color: #DC314E;
+}
+
+
+
+.fullscreen-image {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Texte en blanc */
+    background-color: #000; /* Fond noir */
+}
+
+
+.retour-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: underline; /* Ajoute un soulignement au lien */
+    background-color: black; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+}
+
+.retour-link:hover {
+    background-color: black; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+}
+
+
+/* Style pour le formulaire du quiz */
+form {
+    margin: 0 auto; /* Centrer le formulaire au milieu de la page */
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Police en blanc */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left; /* Aligner le texte à gauche */
+    max-width: 650px; /* Largeur maximale du formulaire */
+}
+
+/* Style pour les boutons radio */
+.quiz-question input[type="radio"] {
+    display: inline; /* Afficher chaque réponse en ligne */
+    margin-right: 10px; /* Ajouter un espace entre les réponses */
+    transform: scale(1.5); /* Augmenter la taille des boutons radio */
+    margin: 10px 0; /* Ajouter une marge de 10 pixels en haut et en bas de chaque bouton radio */
+}
+
+
+.input-label-pair {
+    display: flex;
+    align-items: center;
+   
+}
+
+legend {
+    font-size: 18px;
+}
+
+fieldset{
+    margin-top: 50px;
+}
+
+
+.quiz-question label {
+    display: block; /* Afficher chaque label sur une nouvelle ligne */
+    color: #fff; /* Couleur du texte en blanc */
+    font-size: 14px;
+}
+
+.quiz-question input[type="radio"] {
+    display: inline; /* Afficher chaque réponse en ligne */
+    margin-right: 5px; /* Ajouter un espace entre les réponses */
+}
+
+
+/* Style pour le bouton Soumettre */
+form button[type="submit"] {
+    background-color: #DC314E;
+    color: #fff;
+    border: none;
+    padding: 10px 0; /* Ajouter de l'espace en haut et en bas pour l'alignement vertical */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 42px;
+    width: 50%; /* Faites en sorte que le bouton occupe toute la largeur du formulaire */
+    display: block; /* Convertir en élément de bloc pour pouvoir utiliser la marge auto */
+    margin-left: auto; /* Centrer horizontalement en utilisant la marge auto à gauche */
+    margin-right: auto; /* Centrer horizontalement en utilisant la marge auto à droite */
+}
+/* Style pour le bouton Soumettre au survol */
+button[type="submit"]:hover {
+    background-color: #C12E4A;
+}
+
+
+/* Styles pour les conteneurs "info" */
+.info-label {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin-bottom: 20px;
+}
+
+/* Styles pour les champs de texte */
+.info-label input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    /* Vous pouvez ajouter d'autres styles personnalisés si nécessaire */
+}
+
+.totalscreen {
+   height: 90vh; 
+}
+
+
+/* Ajoutez cette classe pour cibler le paragraphe "Bravo !" */
+.bravo-message {
+    display: none; /* Masquez le paragraphe initialement */
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Texte blanc */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0 auto; /* Centre le paragraphe horizontalement */
+    width: fit-content; /* Ajuste la largeur en fonction du contenu */
+}
+
+
+/* Style pour la bannière */
+.banner {
+    position: relative;
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+    background-color: #000; /* Couleur de fond si l'image est transparente */
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Hauteur de la zone de fondu */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('chemin_vers_votre_masque.png'); /* Inversion du fondu */
+    background-size: 100% 100%;
+    z-index: 2; /* Placez la superposition au-dessus de l'image */
+}
+
+.marginh2 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+
+#text-container {
+    margin-top: 50px;
+}
+
+#dyslexia-text {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+
+/* Styles pour les missions */
+.mission-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espace égal entre les colonnes */
+}
+
+.mission-card {
+    width: calc(30% - 20px); /* Deux cartes par colonne (moins les marges) */
+    margin: 10px;
+    padding: 10px;
+    background-color: #181818; /* Arrière-plan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff; /* Bordure blanche */
+    border-radius: 5px;
+    text-align: center;
+    color: #fff; /* Police noire */
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.mission-card a {
+    background-color: #EB3555;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.mission-card a:hover {
+    background-color: #C12E4A;
+}
+
+/* Styles pour le formulaire */
+/* Styles pour le formulaire */
+form#codeForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Empêche les éléments d'être côte à côte */
+    align-items: center; /* Centre verticalement les éléments à l'intérieur du formulaire */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+/* Style pour le conteneur d'entrée et de bouton */
+.input-button-container {
+    display: flex; /* Affiche les éléments en ligne */
+    align-items: center; /* Centre verticalement les éléments */
+    text-align: left; /* Aligner le texte à gauche à l'intérieur du conteneur */
+    margin-bottom: 10px; /* Ajoute un espace entre l'input et le bouton */
+}
+
+/* Style pour le label */
+label {
+    font-size: 24px; /* Applique la même taille de police que le H2 */
+    display: block; /* Affiche chaque label sur une nouvelle ligne */
+}
+
+/* Style pour l'input */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    /* Vous pouvez ajouter d'autres styles personnalisés si nécessaire */
+}
+
+/* Style pour le bouton */
+button#validerCode {
+    background-color: #DC314E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Ajoute un espace à gauche du bouton */
+}
+
+/* Style pour le bouton au survol */
+button#validerCode:hover {
+    background-color: #C12E4A;
+}
+
+
+/* Ajoutez cette classe pour aligner les boutons en cinq boutons par ligne */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les boutons horizontalement */
+    cursor: none;
+}
+
+/* Style pour les boutons */
+button.identical-button {
+    background-color: #ebebeb;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px; /* Ajoute de l'espace autour des boutons */
+    border-radius: 5px;
+    cursor: none;
+    outline: none;
+}
+
+button.identicalwinner-button {
+    background-color: #DC314E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px; /* Ajoute de l'espace autour des boutons */
+    border-radius: 5px;
+    cursor: none;
+    outline: none;
+}
+
+button.identical-button:hover {
+    background-color: #ebebeb;
+}
+
+
+
+/* test */
+
+#error_message {
+            color: red;
+            background-color: transparent;
+            z-index: 1;
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 30px;
+        }
+
+.grey-btn {
+    background-color: grey;
+}
+
+.grey-btn:hover {
+    background-color: grey;
+}
+
+.aligned-left {
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+    
+#overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    #content {
+      text-align: center;
+      color: black;
+      animation: moveContent 5s infinite, fadeInOut 5s infinite;
+    }
+  
+    @keyframes moveContent {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200px, 200px);
+    }
+    50% {
+        transform: translate(400px, 0);
+    }
+    75% {
+        transform: translate(200px, -200px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+    }
+  
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+
+    footer {
+    background-color: black; /* Couleur de fond */
+    text-align: left; /* Alignement du texte au centre */
+    padding: 10px 10px; /* Espace autour du texte */
+    border-top: 2px solid #fff; /* Bordure blanche en haut */
+    margin-top: 60px;
+}
+
+/* Style du texte dans le footer */
+.footer-content {
+    font-size: 16px; /* Taille de police */
+    color: #827070; /* Couleur du texte */
+}
+
+
+/* Style pour l'écran noir */
+#overlay-index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Couleur de fond noire avec une certaine opacité */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Placez-le au-dessus de tout le contenu */
+    text-align: center;
+    color: #fff; /* Couleur du texte en blanc */
+    font-size: 24px; /* Taille de police du texte */
+}
+
+

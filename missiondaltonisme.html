@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 6 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/chatalere.jpg" alt="Chataléré de La Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <h1>Mission : Les couleurs de Chataléré</h1>
+    </header>
+    <main>
+        <p>Pour passer à la mission suivante, aide Chataléré à se rappeler de l'ordre dans lequel elle a pris ses cocktails la veille. Elle retrouve des tickets de consommation : <br>
+        </p>
+        <p>
+        Mojito : ticket vert<br>
+            Long Island : ticket marron<br>
+            Blue Lagoon : ticket bleu<br>
+            Spritz : ticket orange<br>
+        </p>
+        <p>Chataléré ne peut distinguer aucune couleur. Aide la à sélectionner les bons tickets dans l'ordre : <br> <strong> Vert - Marron - Bleu - Orange </strong></p>
+        <p> Si le message d'erreur apparait, recommence la séquence du début - si rien ne se passe, tu es sur le bon chemin </p>
+     
+        <div id="error_message">
+        </div>
+            <div class="button-container">
+                <button id="blue-button" aria-label="bouton blue lagoon bleu" class="grey-btn">Ticket cocktail</button>
+                <button id="green-button" aria-label="bouton mojito vert" class="grey-btn">Ticket cocktail</button>
+                <button id="brown-button" aria-label="bouton marron Long Island" class="grey-btn">Ticket cocktail</button>
+                <button id="orange-button" aria-label="bouton spritz orange" class="grey-btn">Ticket cocktail</button>
+            </div>
+
+            <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCorrectTitle" aria-describedby="modalCorrectContent" tabindex="-1">
+                <div class="modal-content">
+                    <span class="close" role="button" aria-label="Fermer la modale" tabindex="0" onclick="closeModal()" onkeydown="handleCloseButtonKeydown(event)">&times;</span>
+                    <h2 id="win-modal-title"> <span role="img" aria-hidden="true">🎉</span> Bravo !</h2>
+                    <img src="assets/images/La-Flamme-Camille-Chamoux-Chatalere-J-etais-quand-meme-fesses-a-l-air-tout-le-temps.jpg" alt="Chataléré censurée">
+                    <p class="bravo-message">8% des hommes sont daltoniens. Des contrastes faibles compliquent la navigation. Il en va de même lorsque des informations importantes reposent uniquement sur la couleur, par exemple en indiquant une erreur avec uniquement du rouge. <br>
+                    <a href="missiondys.html">Prochaine mission</a></p>
+                </div>
+            </div>
+    </main> 
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+        </div>
+</footer>
+    <script src="assets/js/script_daltonien.js"></script>
+</body>
+</html>

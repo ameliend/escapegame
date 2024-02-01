@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 1 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/presentateur.jpg" alt="Présentateur de la Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <h1>Mission : répondre aux questions</h1>
+    </header>
+    <main>
+        <p>Répond correctement aux questions du quiz. </p>
+        <!-- Début du formulaire pour le quiz -->
+       <form id="quizForm">
+        <!-- Question 1 -->
+        <fieldset>
+            <legend>1. Qu'est-ce que l'accessibilité numérique ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q1-0" name="q1" value="0">
+                    <label for="q1-0">Un outil de surveillance des utilisateurs.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q1-1" name="q1" value="1">
+                    <label for="q1-1">Permettre à tous et toutes de naviguer quelque soit sa situation</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q1-2" name="q1" value="2">
+                    <label for="q1-2">Un terme technique réservé aux développeurs.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q1-3" name="q1" value="3">
+                    <label for="q1-3">Une application mobile.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 2 -->
+        <fieldset>
+            <legend>2. Combien de personnes en France sont en situation de handicap ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q2-0" name="q2" value="0">
+                    <label for="q2-0">Environ 1 million.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q2-1" name="q2" value="1">
+                    <label for="q2-1">Environ 5 millions.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q2-2" name="q2" value="2">
+                    <label for="q2-2">Environ 12 millions.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q2-3" name="q2" value="3">
+                    <label for="q2-3">Environ 20 millions.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>3. Qu'est-ce que signifie "WCAG" ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q3-0" name="q3" value="0">
+                    <label for="q3-0">World Cup Annual Game.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q3-1" name="q3" value="1">
+                    <label for="q3-1">Web Content Accessibility Guidelines.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q3-2" name="q3" value="2">
+                    <label for="q3-2">Web Code Analysis Group.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q3-3" name="q3" value="3">
+                    <label for="q3-3">Website Content Adjustment Guide.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 4 -->
+        <fieldset>
+            <legend>4. Quelle est la meilleure approche pour rendre un site web accessible ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q4-0" name="q4" value="0">
+                    <label for="q4-0">Rendre le site accessible uniquement pour les utilisateurs en situation de handicap.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q4-1" name="q4" value="1">
+                    <label for="q4-1">Ignorer les besoins des utilisateurs en situation de handicap.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q4-2" name="q4" value="2">
+                    <label for="q4-2">Concevoir le site de manière à ce qu'il soit accessible à tous dès le départ.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q4-3" name="q4" value="3">
+                    <label for="q4-3">Corriger après la mise en production.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 5 -->
+        <fieldset>
+            <legend>5. Quel pourcentage de la population mondiale est en situation de handicap ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q5-0" name="q5" value="0">
+                    <label for="q5-0">Moins de 5%.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q5-1" name="q5" value="1">
+                    <label for="q5-1">Environ 10%.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q5-2" name="q5" value="2">
+                    <label for="q5-2">Environ 15%.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q5-3" name="q5" value="3">
+                    <label for="q5-3">Plus de 20%.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 6 -->
+        <fieldset>
+            <legend>6. Quelle est la meilleure pratique pour les images utilisées sur le web en termes d'accessibilité ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q6-0" name="q6" value="0">
+                    <label for="q6-0">Ne pas utiliser d'images du tout.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q6-1" name="q6" value="1">
+                    <label for="q6-1">Utiliser des images uniquement en arrière-plan.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q6-2" name="q6" value="2">
+                    <label for="q6-2">Utiliser des descriptions textuelles (attribut alt) pour les images.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q6-3" name="q6" value="3">
+                    <label for="q6-3">Utiliser uniquement des images en couleur.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 7 -->
+        <fieldset>
+            <legend>7. Qu'est-ce qu'un lecteur d'écran ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q7-0" name="q7" value="0">
+                    <label for="q7-0">Un programme pour regarder des vidéos en streaming.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q7-1" name="q7" value="1">
+                    <label for="q7-1">Un outil pour lire des livres électroniques.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q7-2" name="q7" value="2">
+                    <label for="q7-2">Un logiciel qui lit à voix haute le contenu affiché à l'écran.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q7-3" name="q7" value="3">
+                    <label for="q7-3">Un dispositif de réalité virtuelle.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 8 -->
+        <fieldset>
+            <legend>8. Pourquoi est-il important de rendre un site web accessible ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q8-0" name="q8" value="0">
+                    <label for="q8-0">Parce que cela rend le site plus beau.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q8-1" name="q8" value="1">
+                    <label for="q8-1">Pour respecter la législation en vigueur.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q8-2" name="q8" value="2">
+                    <label for="q8-2">Uniquement pour attirer plus de visiteurs.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q8-3" name="q8" value="3">
+                    <label for="q8-3">Parce que cela n'a aucune importance.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 9 -->
+        <fieldset>
+            <legend>9. Quels sont les principes de l'accessibilité numérique ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q9-0" name="q9" value="0">
+                    <label for="q9-0">Confusion, complexité, distraction.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q9-1" name="q9" value="1">
+                    <label for="q9-1">Clarté, concision, convivialité.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q9-2" name="q9" value="2">
+                    <label for="q9-2">Couleurs, contraste, créativité.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q9-3" name="q9" value="3">
+                    <label for="q9-3">Perceptible, utilisable, compréhensible et robuste.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Question 10 -->
+        <fieldset>
+            <legend>10. Que doit-on mettre en place s'il y a une vidéo sur notre page d'accueil ?</legend>
+            <div class="quiz-question">
+                <div class="input-label-pair">
+                    <input type="radio" id="q10-0" name="q10" value="0">
+                    <label for="q10-0">Rien de spécial, les vidéos sont toujours accessibles.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q10-1" name="q10" value="1">
+                    <label for="q10-1">Fournir un moyen de contrôler les vidéos et éviter le lancement automatique.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q10-2" name="q10" value="2">
+                    <label for="q10-2">Utiliser des effets spéciaux pour rendre la vidéo plus intéressante.</label><br>
+                </div>
+                <div class="input-label-pair">
+                    <input type="radio" id="q10-3" name="q10" value="3">
+                    <label for="q10-3">Masquer la vidéo pour une meilleure accessibilité.</label><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Bouton pour soumettre le formulaire -->
+        <button type="submit">Mon choix est fait</button>
+    </form>
+
+
+
+        <!-- Fin du formulaire pour le quiz -->
+ <!-- Modale "Bravo" -->
+        <div id="win-modal" class="modal" role="dialog" aria-labelledby="win-modal-title" aria-describedby="win-modal-message" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <span class="close" id="closeCodeIncorrectModal" tabindex="0" aria-label="Fermer la fenêtre modale">&times;</span>
+                <h2 id="win-modal-title"><span role="img" aria-hidden="true">🎉</span> Bravo ! <br> Ça va être dur de faire plus dur que si dur.</h2>
+                <img src="assets/images/marc2.jpg" alt="Marc est heureux">
+                15% de la population est en situation de handicap </br>
+                85 % des personnes handicapées le deviennent au cours de leur vie.</br>
+                Faire de l'accessibilité en une ligne est important pour rendre l'information claire et facilement compréhensible pour tous, y compris les personnes ayant des handicaps. Mais c'est aussi une obligation légale.
+               </p>
+                <a href="missionfocus.html" aria-label="Commencer la mission 2">Mission suivante</a>
+            </div>
+        </div>
+
+        <!-- Modale "Perdu" -->
+       <!-- Modale "Perdu" -->
+        <div id="lose-modal" class="modal" role="dialog" aria-labelledby="lose-modal-title" aria-describedby="lose-modal-message" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <span class="close" id="closeCodeIncorrectModal" tabindex="0" aria-label="Fermer la fenêtre modale">&times;</span>
+                <h2 id="lose-modal-title">Perdu</h2>
+                <img src="assets/images/pleurfinal.jpg" alt="Marc pleur">
+                <p id="wrong-answers-count"></p> <!-- Ajout de cet élément pour afficher le nombre de mauvaises réponses -->
+            </div>
+        </div>
+
+
+    </main> 
+
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+        </div>
+</footer>
+    <script src="assets/js/scriptquiz.js"></script>
+</body>
+</html>

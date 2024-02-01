@@ -1,0 +1,126 @@
+body, h1, h2, p, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+}
+
+main {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: none;
+    height: 80vh;
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 60px; /* Ajoutez une marge au-dessus du titre pour le décaler vers le bas */
+
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les liens */
+a {
+    background-color: #EB3555; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none; /* Supprimer les soulignements des liens */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+a:hover {
+    background-color: #EB3555; /* Couleur de survol des liens */
+}
+
+
+
+.thecursor{
+    display: none;
+    position: absolute;
+    transition: margin 0.2s;
+}
+
+.thecursorbtn {
+    cursor: none;
+    font-size: 12px;
+    padding: 2px 2px;
+    margin: 0px;
+}
+
+.retour-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: underline; /* Ajoute un soulignement au lien */
+    background-color: black; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+}
+
+.retour-link:hover {
+    background-color: black; /* Fond des liens */
+    color: #fff; /* Texte des liens en blanc */
+}
+
+/* Style pour la bannière */
+.banner {
+    position: relative;
+    height: 500px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+    background-color: #000; /* Couleur de fond si l'image est transparente */
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Hauteur de la zone de fondu */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Inversion du fondu */
+    background-size: 100% 100%;
+    z-index: 2; /* Placez la superposition au-dessus de l'image */
+}
+
+
+/* Ajoutez cette classe pour cibler le paragraphe "Bravo !" */
+.bravo-message {
+    display: none; /* Masquez le paragraphe initialement */
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Texte blanc */
+    border: 2px solid #fff; /* Bordure blanche */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0 auto; /* Centre le paragraphe horizontalement */
+    width: fit-content; /* Ajuste la largeur en fonction du contenu */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 3 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/emilie.jpg" alt="Émilie de La flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <h1>Mission : Trouver la bonne image</h1>
+    </header>
+    <main>
+        <p>Pour t'aider, Emilie veut te montrer une image qu'elle avait reçu de la part d'Alexandra. Problème, Emilie est aveugle et ne retrouve plus la bonne image sur laquelle était écrit "Emilie n'est pas une non-voyante, c'est une oui-voyante".</br>Deuxième problème, les altlernatives n'ont pas, ou mal, été renseignées.</br>
+        Clique sur la bonne image.</p>
+        
+        <!-- Encadrés codés en <a> de taille différente et aléatoire -->
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0"><img src="">011_testlogo_9922.png</a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src="">Photo133.png</a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src="">Image888_09.png</a>
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0"><img src="">logo676333</a>
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0"><img src="">Image809.png</a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src="">0449922.png</a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src="">011_li_9922.png</a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src="">logo</a>
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0"><img src="">011344449922.png</a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0" aria-label="Emilie n'est pas une non-voyante, c'est une oui-voyante"><img src="">011344449_922.jpg</a> <!-- La bonne image -->
+        <a class="random-box random-box-large" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src="">01119922.png</a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)" tabindex="0"><img src="">Photo1.png</a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+        <a class="random-box random-box-medium" onclick="checkImage(this)"tabindex="0" ><img src=""></a>
+        <a class="random-box random-box-small" onclick="checkImage(this)" tabindex="0"><img src=""></a>
+
+        <!-- Modale "Bravo" -->
+   <div id="win-modal" class="modal" role="alertdialog" aria-modal="true" aria-labelledby="modalCorrectTitle" aria-describedby="modalCorrectContent" tabindex="0">
+          <div class="modal-content">
+            <span class="close" role="button" aria-label="Fermer la modale" tabindex="0" onclick="closeModal()">&times;</span>
+            <h2 id="win-modal-title"> <span role="img" aria-hidden="true">🎉</span> Bravo !</h2>
+            <img src="assets/images/marc.jpg" alt="Marc de la Flamme">
+            <p id="win-modal-message"> 1 750 000 personnes sont mal ou non voyantes en France.</br>
+            Les alternatives des images permettent aux lecteurs d'écran de verbaliser les informations contenues visuellement. Elles offrent ainsi aux personnes ayant des déficiences visuelles un accès à ces informations.</br> Dans cet exemple, l'alternative "Emilie n'est pas une non-voyante, c'est une oui-voyante" vous aurait permis de la trouver immédiatement grâce au lecteur d'écran.</p>
+            <a href="missionform.html">Prochaine mission</a>
+        </div>
+    </div>
+
+    <!-- Modale "Perdu" -->
+    <div id="lose-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCorrectTitle" aria-describedby="modalCorrectContent" tabindex="0">
+          <div class="modal-content">
+            <span class="close" role="button" aria-label="Fermer la modale" tabindex="0" onclick="closeModal()">&times;</span>
+            <h2 id="lose-modal-title">Désolé, ce n'est pas la bonne image.</h2>
+             <img src="assets/images/pleur.jpg" alt="Marc en pleurs">
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+        </div>
+    </footer>
+    <script src="assets/js/script_alt.js"></script>
+</body>
+</html>

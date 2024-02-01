@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 4 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/anne.jpg" alt="Anne de La Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <h1>Mission : compléter le formulaire</h1>
+    </header>
+    <main>
+        <p>Cette nulle d'Anne offre son aide en proposant de mettre en contact une personne susceptible de t'assister. Elle a transmis le formulaire à compléter à Émilie, qui est non-voyante. Veille à renseigner les informations requises dans les champs appropriés et à envoyer le formulaire.</p>
+        <p> Les champs n'ont pas été labelisés. Trouve-les et renseigne la bonne information.</p>
+        <p> Informations à renseigner dans les champs : 
+        <div class="tag">Docteur</div>
+        <div class="tag">Juiphe</div>
+        <div class="tag">06xxxxxxxx</div>
+        <div class="tag">docteur.juiphe@gmail.com</div> 
+        <div class="tag">Chupacabra</div> </p>
+        
+        <form>
+        <div class="info-label">
+            <input type="text" id="titre" aria-label="Entrez votre titre" class="input-hidden">
+        </div>
+
+        <div class="info-label">
+            <input type="text" id="nom" aria-label="Entrez votre nom" class="input-hidden">
+        </div>
+        
+        <div class="info-label">
+            <input type="text" id="adresse" aria-label="Entrez votre adresse" class="input-hidden">
+        </div>
+        
+        <div class="info-label">
+            <input type="text" id="telephone" aria-label="Entrez votre numéro de téléphone" class="input-hidden">
+        </div>
+        
+        <div class="info-label">
+            <input type="text" id="email" aria-label="Entrez votre mail" class="input-hidden">
+        </div>
+    </form>
+        <button id="valider" class="btn-hidden">Envoyer</button>
+
+           <!-- Modale de succès -->
+    <div id="modalBravo" class="modal" role="dialog" aria-labelledby="modalBravoTitle" aria-describedby="modalBravoContent" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" aria-label="Fermer la modale de succès" onclick="closeModal('modalBravo')" tabindex="0">&times;</span>
+        <h2 id="modalBravoTitle"> <span role="img" aria-hidden="true">🎉</span> Bravo !</h2>
+         <img src="assets/images/juiphe.jpg" alt="Docteur Juiphe de la Flamme">
+        <p id="modalBravoContent">L'utilisation de formulaires bien conçus facilite la compréhension des informations attendues par les utilisateurs qui naviguent avec des lecteurs d'écran. De plus, la présence d'étiquettes visibles aide également les personnes handicapées cognitives à comprendre les données requises. </br>Astuce : En naviguant au clavier avec un lecteur d'écran tel que VoiceOver ou Talkback, tu aurais reçu les informations nécessaires pour chaque champ.</p>
+        <a href="missiontremblements.html">Prochaine mission</a>
+    </div>
+</div>
+
+    <!-- Modale d'échec -->
+    <div id="modalPerdu" class="modal" role="dialog" aria-labelledby="modalPerduTitle" aria-describedby="modalPerduContent" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" aria-label="Fermer la modale d'échec" onclick="closeModal('modalPerdu')" tabindex="0">&times;</span>
+        <h2 id="modalPerduTitle">Perdu !</h2>
+        <img src="assets/images/juiphenon.jpg" alt="Docteur Juiphe de la Flamme : Installez-vous">
+        <p id="modalPerduContent">Un ou plusieurs champs ont une valeur incorrecte. Réessaie.</p>
+    </div>
+</div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+        </div>
+    </footer>
+    <script src="assets/js/scriptform.js"></script>
+    </body>
+</html>
