@@ -27,7 +27,7 @@ function handleButtonClick(buttonId) {
 // Fonction pour gérer une séquence incorrecte
 function invalidSequence() {
     resetSequence();
-    messageInvalidDiv.textContent = 'Olééééé ! l\'ordre n\'est pas le bon. Recommence du début.';
+    messageInvalidDiv.textContent = 'Olééééé ! L\'ordre n\'est pas le bon. Recommence du début.';
     // Supprimer le message d'erreur après 5 secondes
     setTimeout(() => {
         messageInvalidDiv.textContent = '';
