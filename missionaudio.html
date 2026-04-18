@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="timer-container" aria-live="polite" aria-label="Temps restant">
-        <span id="game-timer">05:00</span>
+        <span id="game-timer">10:00</span>
     </div>
     <header>
         <div class="banner">
@@ -22,13 +22,21 @@
     <main>
         <p>Afin d'entrer dans le repère où est détenu Orchidée, il te faut le mot de passe. Réponds à cette question :</p>
 
-        <div class="audio-player-container">
+        <form id="password-form" class="question-form">
+            <label for="reponse">Qu'est ce qui empêche Henry de débloquer le train d'atterrissage ?</label>
+            <input type="text" id="reponse" name="reponse" placeholder="Votre réponse...">
+            <button type="submit">Entrer dans le bâtiment</button>
+        </form>
+
+        <div class="video-player-wrapper">
             <video id="audio-player" controls>
                 <source id="audio-source" src="assets/audio/SansAD.mp3" type="audio/mpeg">
             </video>
-            <button class="audio-track-btn" id="btn-audio-track" aria-haspopup="dialog">
-                Piste audio
-            </button>
+            <div class="video-extra-controls">
+                <button class="audio-track-btn" id="btn-audio-track" aria-haspopup="dialog">
+                    🎵 Piste audio
+                </button>
+            </div>
         </div>
 
         <!-- Modale sélection piste audio -->
@@ -50,12 +58,6 @@
             </div>
         </div>
 
-        <form id="password-form" class="question-form">
-            <label for="reponse">Qu'est ce qui empêche Henry de débloquer le train d'atterrissage ?</label>
-            <input type="text" id="reponse" name="reponse" placeholder="Votre réponse...">
-            <button type="submit">Entrer dans le bâtiment</button>
-        </form>
-
         <!-- Modale succès -->
         <div id="modal-success" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-success-title">
             <div class="modal-content">
@@ -73,6 +75,7 @@
         </div>
     </footer>
     <script src="assets/js/script_audio.js"></script>
+    <script>window.MISSION_DURATION_OVERRIDE = 10 * 60 * 1000;</script>
     <script src="assets/js/timer.js"></script>
 </body>
 </html>
