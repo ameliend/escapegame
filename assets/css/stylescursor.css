@@ -18,13 +18,16 @@ header {
     padding: 0;
 }
 
+html, body, body * {
+    cursor: none !important;
+}
+
 main {
     max-width: auto;
     margin: 0 auto;
     padding: 20px;
     background-color: transparent;
     box-shadow: none;
-    cursor: none;
     height: 80vh;
     width: 100%;
 }
@@ -59,10 +62,17 @@ a:hover {
 
 
 
-.thecursor{
+.thecursor {
     display: none;
     position: absolute;
-    transition: margin 0.2s;
+    width: 16px;
+    height: 20px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 0% 87%, 20% 65%, 37% 100%, 52% 94%, 35% 67%, 68% 67%);
+    pointer-events: none;
+    z-index: 99999;
+    transition: margin 0.15s;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8));
 }
 
 .thecursorbtn {
@@ -123,4 +133,18 @@ a:hover {
     text-align: center; /* Centre le texte horizontalement */
     margin: 0 auto; /* Centre le paragraphe horizontalement */
     width: fit-content; /* Ajuste la largeur en fonction du contenu */
+}
+
+#timer-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #DC314E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 99998;
+    cursor: none !important;
 }
