@@ -214,8 +214,9 @@ input[type="text"] {
 
 }
 
-.input-hidden{
-  background-color: black;  
+.input-hidden {
+    background-color: black;
+    pointer-events: none;
 }
 
 .btn-hidden{
