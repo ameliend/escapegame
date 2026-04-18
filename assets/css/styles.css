@@ -795,9 +795,40 @@ button.identical-button:hover {
     aspect-ratio: 16/9;
     background: #000;
     overflow: hidden;
-    display: flex;
+    position: relative;
+}
+
+.player-no-visual {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    display: none;
     align-items: center;
     justify-content: center;
+}
+
+.error-msg {
+    color: #DC314E;
+    font-size: 15px;
+    min-height: 22px;
+    background: none;
+    padding: 0;
+    margin: 4px 0 0;
+}
+
+.audio-failed-overlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
 }
 
 .player-screen img {

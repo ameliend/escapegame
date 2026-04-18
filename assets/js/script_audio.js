@@ -13,8 +13,14 @@ const btnAudioTrack = document.getElementById('btn-audio-track');
 const modalAudioTrack = document.getElementById('modal-audio-track');
 const modalSuccess = document.getElementById('modal-success');
 const passwordForm = document.getElementById('password-form');
+const errorMsg = document.getElementById('error-msg');
+const failedOverlay = document.getElementById('audio-failed-overlay');
+const playerPoster = document.getElementById('player-poster');
+const playerNoVisual = document.getElementById('player-no-visual');
 
 const validAnswers = ['une araignée', 'araignée', 'tarentule', 'une tarentule'];
+let adTrackActive = false;
+let attemptsLeft = 3;
 
 function formatTime(secs) {
     if (isNaN(secs)) return '0:00';
@@ -27,6 +33,8 @@ function setPlaying(playing) {
     playIcon.style.display = playing ? 'none' : 'block';
     pauseIcon.style.display = playing ? 'block' : 'none';
     playBtn.setAttribute('aria-label', playing ? 'Pause' : 'Lecture');
+    playerPoster.style.display = playing ? 'none' : 'block';
+    playerNoVisual.style.display = playing ? 'flex' : 'none';
 }
 
 playBtn.addEventListener('click', () => {
@@ -85,9 +93,10 @@ function closeAudioModal() {
 
 function applyAudioTrack() {
     const selected = document.querySelector('input[name="audio-track"]:checked').value;
+    adTrackActive = selected === 'ad';
     const wasPlaying = !audio.paused;
     const currentTime = audio.currentTime;
-    audioSource.src = selected === 'ad' ? 'assets/audio/AD.mp3' : 'assets/audio/SansAD.mp3';
+    audioSource.src = adTrackActive ? 'assets/audio/AD.mp3' : 'assets/audio/SansAD.mp3';
     audio.load();
     audio.currentTime = currentTime;
     if (wasPlaying) audio.play();
@@ -101,8 +110,19 @@ function closeSuccessModal() {
 passwordForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const answer = document.getElementById('reponse').value.trim().toLowerCase();
-    if (validAnswers.includes(answer)) {
+
+    if (validAnswers.includes(answer) && adTrackActive) {
         modalSuccess.style.display = 'block';
+        errorMsg.textContent = '';
+        return;
+    }
+
+    attemptsLeft--;
+    if (attemptsLeft <= 0) {
+        failedOverlay.style.display = 'flex';
+    } else {
+        const mot = attemptsLeft === 1 ? 'chance' : 'chances';
+        errorMsg.textContent = `Mauvais mot de passe, plus que ${attemptsLeft} ${mot}.`;
     }
 });
 

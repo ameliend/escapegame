@@ -28,7 +28,14 @@
             <div class="player-column">
                 <div class="custom-player">
                     <div class="player-screen">
-                        <img src="assets/images/paddington.jpg" alt="">
+                        <img id="player-poster" src="assets/images/paddington.jpg" alt="">
+                        <div id="player-no-visual" class="player-no-visual">
+                            <svg viewBox="0 0 24 24" fill="none" width="72" height="72" aria-label="Contenu audio uniquement">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="white" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.5"/>
+                                <line x1="3" y1="3" x2="21" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="player-controls-bar">
                         <div class="ctrl-left">
@@ -76,9 +83,17 @@
                 <form id="password-form" class="question-form">
                     <label for="reponse">Qu'est ce qui empêche Henry de débloquer le train d'atterrissage ?</label>
                     <input type="text" id="reponse" name="reponse" placeholder="Votre réponse...">
+                    <p id="error-msg" class="error-msg" aria-live="assertive" role="alert"></p>
                     <button type="submit">Entrer dans le bâtiment</button>
                 </form>
             </div>
+        </div>
+
+        <!-- Écran mission échouée -->
+        <div id="audio-failed-overlay" class="audio-failed-overlay" style="display:none">
+            <h2>Mission échouée</h2>
+            <p>Tu n'as pas trouvé le mot de passe en 3 essais. Alexandra garde Orchidée prisonnière...</p>
+            <a href="missionaudio.html">Réessayer la mission</a>
         </div>
 
         <!-- Modale sélection piste audio -->
