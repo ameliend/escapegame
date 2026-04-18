@@ -80,6 +80,7 @@ a:hover {
     font-size: 6px;
     padding: 1px 1px;
     margin: 0px;
+    outline: none;
 }
 
 .retour-link {

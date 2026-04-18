@@ -22,6 +22,12 @@ $(document).mousemove(function(e) {
 $(document).ready(function () {
     $("#messageBravo").hide();
 
+    $("#cliquezIci").on('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+        }
+    });
+
     $("#cliquezIci").click(function (event) {
         event.preventDefault();
         $(this).hide();
