@@ -1,4 +1,4 @@
-const MISSION_DURATION = 5 * 60 * 1000;
+const MISSION_DURATION = window.MISSION_DURATION_OVERRIDE || 5 * 60 * 1000;
 
 function initTimer() {
     const el = document.getElementById('game-timer');
