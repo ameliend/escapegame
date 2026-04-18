@@ -18,7 +18,7 @@ const failedOverlay = document.getElementById('audio-failed-overlay');
 const playerPoster = document.getElementById('player-poster');
 const playerNoVisual = document.getElementById('player-no-visual');
 
-const validAnswers = ['une araignée', 'araignée', 'tarentule', 'une tarentule'];
+const validAnswers = ['une araignée violette', 'araignée violette', 'tarentule violette', 'une tarentule violette'];
 let adTrackActive = false;
 let attemptsLeft = 3;
 
@@ -111,7 +111,7 @@ passwordForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const answer = document.getElementById('reponse').value.trim().toLowerCase();
 
-    if (validAnswers.includes(answer) && adTrackActive) {
+    if (validAnswers.includes(answer)) {
         modalSuccess.style.display = 'block';
         errorMsg.textContent = '';
         return;
@@ -122,7 +122,7 @@ passwordForm.addEventListener('submit', (e) => {
         failedOverlay.style.display = 'flex';
     } else {
         const mot = attemptsLeft === 1 ? 'chance' : 'chances';
-        errorMsg.textContent = `Mauvais mot de passe, plus que ${attemptsLeft} ${mot}.`;
+        errorMsg.textContent = `⚠ Mauvais mot de passe, plus que ${attemptsLeft} ${mot}.`;
     }
 });
 
