@@ -290,19 +290,19 @@ input[type="text"] {
 }
 
 
-/* Classes apour enlever le curseur */
-.nocursor{
-    cursor: none;
+/* Classes pour enlever le curseur */
+html:has(body.nocursor),
+body.nocursor,
+body.nocursor * {
+    cursor: none !important;
 }
 
 button.nocursor, a.nocursor {
-    cursor: none;
     margin: 50px;
     margin-left: 579px;
 }
 
 button.nocursor:hover, a.nocursor:hover {
-    cursor: none;
     background-color: #DC314E;
 }
 
