@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 6 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="timer-container" aria-live="polite" aria-label="Temps restant">
+        <span id="game-timer">05:00</span>
+    </div>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/paddington.jpg" alt="Paddington dans La Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <h1>Mission : Trouver le mot manquant</h1>
+    </header>
+    <main>
+        <p>Afin d'entrer dans le repère où est détenu Orchidée, il te faut le mot de passe. Réponds à cette question :</p>
+
+        <div class="audio-player-container">
+            <video id="audio-player" controls>
+                <source id="audio-source" src="assets/audio/SansAD.mp3" type="audio/mpeg">
+            </video>
+            <button class="audio-track-btn" id="btn-audio-track" aria-haspopup="dialog">
+                Piste audio
+            </button>
+        </div>
+
+        <!-- Modale sélection piste audio -->
+        <div id="modal-audio-track" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-audio-title">
+            <div class="modal-content">
+                <span class="close" tabindex="0" aria-label="Fermer la modale" onclick="closeAudioModal()">&times;</span>
+                <h2 id="modal-audio-title">Choisir la piste audio</h2>
+                <div class="audio-track-list">
+                    <label>
+                        <input type="radio" name="audio-track" value="sans-ad" checked>
+                        Français
+                    </label>
+                    <label>
+                        <input type="radio" name="audio-track" value="ad">
+                        Français (audiodescription)
+                    </label>
+                </div>
+                <button onclick="applyAudioTrack()">Valider</button>
+            </div>
+        </div>
+
+        <form id="password-form" class="question-form">
+            <label for="reponse">Qu'est ce qui empêche Henry de débloquer le train d'atterrissage ?</label>
+            <input type="text" id="reponse" name="reponse" placeholder="Votre réponse...">
+            <button type="submit">Entrer dans le bâtiment</button>
+        </form>
+
+        <!-- Modale succès -->
+        <div id="modal-success" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-success-title">
+            <div class="modal-content">
+                <span class="close" tabindex="0" aria-label="Fermer la modale" onclick="closeSuccessModal()">&times;</span>
+                <h2 id="modal-success-title"><span role="img" aria-hidden="true">🎉</span> Bien joué !</h2>
+                <p>L'audiodescription permet à plus d'un million de personne de consommer nos contenus.</p>
+                <a href="missiondys.html">Mission suivante</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+            <a href="index.html" class="normal-link">Home</a>
+        </div>
+    </footer>
+    <script src="assets/js/script_audio.js"></script>
+    <script src="assets/js/timer.js"></script>
+</body>
+</html>
