@@ -701,10 +701,144 @@ button.identical-button:hover {
 
 /* Style du texte dans le footer */
 .footer-content {
-    font-size: 16px; /* Taille de police */
-    color: #827070; /* Couleur du texte */
+    font-size: 16px;
+    color: #fff;
     display: flex;
     justify-content: space-between;
+}
+
+/* Animation touches clavier */
+.keyboard-tip {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.key-combo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.key {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #222;
+    border: 2px solid #fff;
+    border-bottom-width: 4px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    animation: keypress 2.5s ease-in-out infinite;
+}
+
+.key-label {
+    font-size: 18px;
+    color: #fff;
+}
+
+.key-plus {
+    font-size: 20px;
+    color: #fff;
+}
+
+@keyframes keypress {
+    0%, 55%, 100% { transform: translateY(0); border-bottom-width: 4px; }
+    65% { transform: translateY(2px); border-bottom-width: 2px; }
+    75% { transform: translateY(0); border-bottom-width: 4px; }
+}
+
+/* Bouton correct daltonisme */
+.correct-btn {
+    background-color: #2d9e2d;
+}
+.correct-btn:hover {
+    background-color: #2d9e2d;
+}
+
+/* Mission audio */
+.audio-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.audio-player-container video {
+    width: 100%;
+    max-width: 560px;
+    background: #111;
+}
+
+.audio-track-btn {
+    background-color: #DC314E;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.audio-track-btn:hover {
+    background-color: #C12E4A;
+}
+
+.audio-track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    margin: 16px 0;
+    font-size: 18px;
+}
+
+.audio-track-list label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.audio-track-list input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.question-form label {
+    font-size: 20px;
+    color: #fff;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.question-form input[type="text"] {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: #222;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
 }
 
 
