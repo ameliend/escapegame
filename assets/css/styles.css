@@ -726,3 +726,15 @@ button.identical-button:hover {
 }
 
 
+#timer-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #DC314E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 9999;
+}
