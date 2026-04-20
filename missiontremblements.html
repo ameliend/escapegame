@@ -26,7 +26,14 @@
     <main>
 
         <p>Claude Chambenoit souhaite aussi t'apporter son aide. Mais à cause de son grand âge, des tremblements vont venir pertuber sa navigation. Aide-la à cliquer sur le bouton.</p>
-        <a href="#" id="cliquezIci" class="thecursorbtn">Cliquez ici</a>
+        <img src="assets/images/laflamme.jpg" alt="La Flamme" class="tremblements-image">
+        <a href="#" id="cliquezIci" class="thecursorbtn" aria-label="Cliquez ici">
+            <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+                <circle cx="30" cy="30" r="29" fill="black" stroke="white" stroke-width="2"/>
+                <line x1="18" y1="18" x2="42" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <line x1="42" y1="18" x2="18" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </a>
         <p id="messageBravo" class="bravo-message"></p>
         <div class="thecursor"></div>
     </main>

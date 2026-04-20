@@ -576,6 +576,52 @@ button#validerCode:hover {
 }
 
 
+/* Grille de cards — mission focus */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 24px 0;
+}
+
+.candidate-card {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s;
+}
+
+.candidate-card:focus {
+    outline: 3px solid #DC314E;
+    outline-offset: 2px;
+    border-color: #DC314E;
+}
+
+.candidate-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    background: #000;
+    padding: 0;
+    border-radius: 0;
+}
+
+.candidate-card .card-title {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: #1a1a1a;
+    display: block;
+}
+
 /* Ajoutez cette classe pour aligner les boutons en cinq boutons par ligne */
 .button-container {
     display: flex;
