@@ -298,13 +298,9 @@ body.nocursor * {
     cursor: none !important;
 }
 
-button.nocursor, a.nocursor {
-    margin: 50px;
-    margin-left: 579px;
-}
-
-button.nocursor:hover, a.nocursor:hover {
-    background-color: #DC314E;
+button.nocursor:hover, a.nocursor:hover,
+button.nocursor:focus, a.nocursor:focus {
+    background-color: transparent;
 }
 
 
