@@ -298,6 +298,11 @@ body.nocursor * {
     cursor: none !important;
 }
 
+html.nocursor {
+    min-height: 100%;
+    cursor: none !important;
+}
+
 button.nocursor:hover, a.nocursor:hover,
 button.nocursor:focus, a.nocursor:focus {
     background-color: transparent;
@@ -614,6 +619,7 @@ button#validerCode:hover {
     background: #111;
     margin: 0;
     padding: 0;
+    margin-bottom: 36px;
 }
 
 /* Ajoutez cette classe pour aligner les boutons en cinq boutons par ligne */
