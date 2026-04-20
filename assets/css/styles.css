@@ -601,13 +601,9 @@ button#validerCode:hover {
     cursor: none;
 }
 
-.candidate-card:focus {
-    outline: none;
-}
-
+.candidate-card:focus,
 .candidate-card:focus img {
-    outline: 3px solid #DC314E;
-    outline-offset: 2px;
+    outline: none;
 }
 
 .candidate-card img {
