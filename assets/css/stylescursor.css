@@ -88,6 +88,12 @@ a:hover {
     justify-content: center;
 }
 
+.thecursorbtn:hover,
+.thecursorbtn:focus {
+    background: transparent;
+    outline: none;
+}
+
 .tremblements-target {
     position: relative;
     display: inline-block;
