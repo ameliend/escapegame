@@ -1,8 +1,12 @@
 const MISSION_DURATION = window.MISSION_DURATION_OVERRIDE || 5 * 60 * 1000;
+const TIP_THRESHOLD = 90 * 1000;
 
 function initTimer() {
     const el = document.getElementById('game-timer');
     if (!el) return;
+
+    const tipModal = document.getElementById('tip-modal');
+    let tipShown = false;
 
     const start = Date.now();
 
@@ -11,6 +15,12 @@ function initTimer() {
         const m = Math.floor(left / 60000);
         const s = Math.floor((left % 60000) / 1000);
         el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+
+        if (tipModal && !tipShown && left <= TIP_THRESHOLD) {
+            tipShown = true;
+            tipModal.style.display = 'block';
+        }
+
         if (left === 0) {
             window.location.href = 'timeout.html';
         }
