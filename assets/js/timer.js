@@ -5,7 +5,7 @@ function initTimer() {
     const el = document.getElementById('game-timer');
     if (!el) return;
 
-    const tipModal = document.getElementById('tip-modal');
+    const tipModal = document.getElementById('tip-toast');
     let tipShown = false;
 
     const start = Date.now();
@@ -18,7 +18,8 @@ function initTimer() {
 
         if (tipModal && !tipShown && left <= TIP_THRESHOLD) {
             tipShown = true;
-            tipModal.style.display = 'block';
+            tipModal.classList.add('tip-toast--visible');
+            setTimeout(function () { tipModal.classList.remove('tip-toast--visible'); }, 90000);
         }
 
         if (left === 0) {

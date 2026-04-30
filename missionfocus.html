@@ -39,23 +39,19 @@
             <li class="card-item"><button class="candidate-card nocursor"><img src="assets/images/bouton15.jpg" alt=""></button></li>
             <li class="card-item"><button class="candidate-card nocursor"><img src="assets/images/bouton12.jpg" alt=""></button></li>
         </ul>
-        <!-- Modale "Tip" -->
-        <div id="tip-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="tip-modal-title">
-            <div class="modal-content">
-                <span class="close" id="close-tip-modal" tabindex="0" aria-label="Fermer le conseil">&times;</span>
-                <h2 id="tip-modal-title">Conseil</h2>
-                <p>Pense à naviguer au clavier</p>
-                <div class="keyboard-tip">
-                    <div class="key-combo">
-                        <span class="key">Tab</span>
-                        <span class="key-label">pour avancer</span>
-                    </div>
-                    <div class="key-combo">
-                        <span class="key">Shift</span>
-                        <span class="key-plus">+</span>
-                        <span class="key">Tab</span>
-                        <span class="key-label">pour reculer</span>
-                    </div>
+        <!-- Toast "Tip" -->
+        <div id="tip-toast" role="status" aria-live="polite">
+            <p>Pense à naviguer au clavier</p>
+            <div class="keyboard-tip">
+                <div class="key-combo">
+                    <span class="key">Tab</span>
+                    <span class="key-label">pour avancer</span>
+                </div>
+                <div class="key-combo">
+                    <span class="key">Shift</span>
+                    <span class="key-plus">+</span>
+                    <span class="key">Tab</span>
+                    <span class="key-label">pour reculer</span>
                 </div>
             </div>
         </div>
@@ -80,16 +76,5 @@
 </footer>
         <script src="assets/js/script_keyboard.js"></script>
         <script src="assets/js/timer.js"></script>
-        <script>
-            (function () {
-                const tipModal = document.getElementById('tip-modal');
-                const closeBtn = document.getElementById('close-tip-modal');
-                function closeTip() { tipModal.style.display = 'none'; }
-                closeBtn.addEventListener('click', closeTip);
-                closeBtn.addEventListener('keydown', function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); closeTip(); }
-                });
-            })();
-        </script>
 </body>
 </html>
