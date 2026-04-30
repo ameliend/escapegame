@@ -19,7 +19,7 @@ function initTimer() {
         if (tipModal && !tipShown && left <= TIP_THRESHOLD) {
             tipShown = true;
             tipModal.classList.add('tip-toast--visible');
-            setTimeout(function () { tipModal.classList.remove('tip-toast--visible'); }, 7000);
+            setTimeout(function () { tipModal.classList.remove('tip-toast--visible'); }, 90000);
         }
 
         if (left === 0) {
