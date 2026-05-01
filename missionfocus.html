@@ -76,5 +76,16 @@ Ne pouvant utiliser une souris, elles naviguent au clavier ou via des dispositif
 </footer>
         <script src="assets/js/script_keyboard.js"></script>
         <script src="assets/js/timer.js"></script>
+        <script>
+            function forceCursorHidden() {
+                document.documentElement.setAttribute('style', 'cursor: none !important');
+                document.body.setAttribute('style', 'cursor: none !important');
+            }
+            forceCursorHidden();
+            window.addEventListener('pageshow', forceCursorHidden);
+            // mouseenter : quand la souris revient dans la page depuis le chrome du navigateur
+            document.addEventListener('mouseenter', forceCursorHidden);
+            document.addEventListener('mousemove', forceCursorHidden);
+        </script>
 </body>
 </html>
