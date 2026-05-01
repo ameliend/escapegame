@@ -7,16 +7,19 @@ const winModal = document.getElementById("win-modal");
 // Récupérer le bouton de fermeture de la modale
 const closeWinModalButton = document.getElementById("close-win-modal");
 
-// Écouter l'événement clic sur le bouton "win-button"
-winButton.addEventListener("click", function(e) {
-    if (e.detail > 0) return; // ignorer les clics souris
+// mousedown est déclenché uniquement par la souris, jamais par Entrée/Espace au clavier
+let winButtonMouseDown = false;
+winButton.addEventListener("mousedown", function() { winButtonMouseDown = true; });
+winButton.addEventListener("click", function() {
+    if (winButtonMouseDown) { winButtonMouseDown = false; return; }
     winModal.style.display = "block";
     closeWinModalButton.focus();
 });
 
-// Fermer la modale lorsque l'utilisateur clique sur le bouton de fermeture
-closeWinModalButton.addEventListener("click", function(e) {
-    if (e.detail > 0) return; // ignorer les clics souris
+let closeModalMouseDown = false;
+closeWinModalButton.addEventListener("mousedown", function() { closeModalMouseDown = true; });
+closeWinModalButton.addEventListener("click", function() {
+    if (closeModalMouseDown) { closeModalMouseDown = false; return; }
     winModal.style.display = "none";
 });
 
