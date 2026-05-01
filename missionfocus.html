@@ -76,5 +76,14 @@ Ne pouvant utiliser une souris, elles naviguent au clavier ou via des dispositif
 </footer>
         <script src="assets/js/script_keyboard.js"></script>
         <script src="assets/js/timer.js"></script>
+        <script>
+            function forceCursorHidden() {
+                document.documentElement.style.cursor = 'none';
+                document.body.style.cursor = 'none';
+            }
+            // Déclenché aussi lors d'une restauration bfcache (retour arrière navigateur)
+            window.addEventListener('pageshow', forceCursorHidden);
+            document.addEventListener('mousemove', forceCursorHidden);
+        </script>
 </body>
 </html>
