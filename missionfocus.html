@@ -77,14 +77,22 @@ Ne pouvant utiliser une souris, elles naviguent au clavier ou via des dispositif
         <script src="assets/js/script_keyboard.js"></script>
         <script src="assets/js/timer.js"></script>
         <script>
+            // Injecte une règle CSS globale – plus fiable que l'inline sur Chrome
+            (function() {
+                const s = document.createElement('style');
+                s.textContent = 'html, body, * { cursor: none !important; }';
+                document.head.appendChild(s);
+            })();
+
             function forceCursorHidden() {
-                document.documentElement.setAttribute('style', 'cursor: none !important');
-                document.body.setAttribute('style', 'cursor: none !important');
+                document.documentElement.style.setProperty('cursor', 'none', 'important');
+                document.body.style.setProperty('cursor', 'none', 'important');
             }
             forceCursorHidden();
             window.addEventListener('pageshow', forceCursorHidden);
-            // mouseenter : quand la souris revient dans la page depuis le chrome du navigateur
+            // mouseover bubbles depuis tous les enfants, mouseenter couvre le re-entry depuis le chrome navigateur
             document.addEventListener('mouseenter', forceCursorHidden);
+            document.addEventListener('mouseover', forceCursorHidden);
             document.addEventListener('mousemove', forceCursorHidden);
         </script>
 </body>
