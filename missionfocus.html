@@ -78,11 +78,13 @@ Ne pouvant utiliser une souris, elles naviguent au clavier ou via des dispositif
         <script src="assets/js/timer.js"></script>
         <script>
             function forceCursorHidden() {
-                document.documentElement.style.cursor = 'none';
-                document.body.style.cursor = 'none';
+                document.documentElement.setAttribute('style', 'cursor: none !important');
+                document.body.setAttribute('style', 'cursor: none !important');
             }
-            // Déclenché aussi lors d'une restauration bfcache (retour arrière navigateur)
+            forceCursorHidden();
             window.addEventListener('pageshow', forceCursorHidden);
+            // mouseenter : quand la souris revient dans la page depuis le chrome du navigateur
+            document.addEventListener('mouseenter', forceCursorHidden);
             document.addEventListener('mousemove', forceCursorHidden);
         </script>
 </body>
