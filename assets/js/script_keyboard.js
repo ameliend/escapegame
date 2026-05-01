@@ -8,17 +8,15 @@ const winModal = document.getElementById("win-modal");
 const closeWinModalButton = document.getElementById("close-win-modal");
 
 // Écouter l'événement clic sur le bouton "win-button"
-winButton.addEventListener("click", function() {
-    // Afficher la modale "Bravo"
+winButton.addEventListener("click", function(e) {
+    if (e.detail > 0) return; // ignorer les clics souris
     winModal.style.display = "block";
-    
-    // Donner le focus au bouton de fermeture
     closeWinModalButton.focus();
 });
 
 // Fermer la modale lorsque l'utilisateur clique sur le bouton de fermeture
-closeWinModalButton.addEventListener("click", function() {
-    // Masquer la modale "Bravo"
+closeWinModalButton.addEventListener("click", function(e) {
+    if (e.detail > 0) return; // ignorer les clics souris
     winModal.style.display = "none";
 });
 
